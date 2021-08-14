@@ -1,0 +1,7 @@
+key	kor	eng
+101	대머리군인	afdaf
+102	전사	afdaf
+103	격투가	dfafdas
+201	원거리 공격하는 군인	dafaf
+202	근거리 몸빵 캐릭	dfadfa
+203	근거리 격투 딜러	fadfaf

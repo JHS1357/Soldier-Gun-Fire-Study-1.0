@@ -1,0 +1,4 @@
+key,nameKey,explaneKey,hp,attack,prefab,icon
+1,101,201,300,100,Prefabs/Character/Player,Player
+2,102,202,1000,200,Prefabs/Character/Warrior,Warrior
+3,103,203,500,300,Prefabs/Character/Fighter,Fighter

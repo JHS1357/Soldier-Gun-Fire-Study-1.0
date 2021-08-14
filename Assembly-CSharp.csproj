@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{36DAA569-ECBD-296C-2A46-B482F0DE74D4}</ProjectGuid>
+    <ProjectGuid>{D9020875-4BBD-B8A6-1024-6312CFD4EA54}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -60,11 +60,15 @@
     <Compile Include="Assets\Scripts\MyGizmos.cs" />
     <Compile Include="Assets\Scripts\FollowCam.cs" />
     <Compile Include="Assets\Scripts\BulletCtrl.cs" />
+    <Compile Include="Assets\Scripts\DataManager.cs" />
     <Compile Include="Assets\Scripts\BulletManager.cs" />
     <Compile Include="Assets\Scripts\PlayerCtrl.cs" />
     <Compile Include="Assets\Scripts\RemoveBullet.cs" />
     <Compile Include="Assets\Scripts\ParticleManager.cs" />
     <Compile Include="Assets\Scripts\Particle.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Resources\TextData\TextTable.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
