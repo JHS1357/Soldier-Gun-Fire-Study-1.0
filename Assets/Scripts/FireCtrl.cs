@@ -5,21 +5,22 @@ using UnityEngine;
 public class FireCtrl : MonoBehaviour
 {
     private GameObject bulletPrefab;
-    private Transform firePos;
+    private Transform firePos;    
 
     private void Awake()
     {
         bulletPrefab = Resources.Load<GameObject>("Prefabs/Bullet");
 
-        Transform[] childran = GetComponentsInChildren<Transform>();
+        Transform[] children = GetComponentsInChildren<Transform>();
 
-        foreach(Transform child in childran)
+        foreach(Transform child in children)
         {
             if (child.name == "FirePos")
                 firePos = child;
         }
 
         BulletManager.instance.AddBullet("PlayerBullet", 30);
+        ParticleManager.instance.CreateParticle();
     }
 
     private void Update()
@@ -27,17 +28,12 @@ public class FireCtrl : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             Fire();
-        }
+        }        
     }
+
     private void Fire()
     {
-
         BulletManager.instance.Fire("PlayerBullet", firePos);
-
-        /*
-        Instantiate(bulletPrefab, firePos.position, firePos.rotation);
-
-        BulletManager bm = BulletManager.instance;
-        */
+        ParticleManager.instance.Play("MuzzleFlash", firePos);
     }
 }

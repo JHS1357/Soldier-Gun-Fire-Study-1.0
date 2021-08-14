@@ -21,8 +21,6 @@ public class BulletManager : MonoBehaviour
     }
 
     private Dictionary<string, List<GameObject>> totalBullet = new Dictionary<string, List<GameObject>>();
-    //자료 구조
-    //단순 자료 구조 / 복합 자료 구조
 
     public void AddBullet(string key, int poolCount = 50)
     {
@@ -41,6 +39,7 @@ public class BulletManager : MonoBehaviour
 
         totalBullet.Add(key, bullets);
     }
+
     public void Fire(string key, Transform trans)
     {
         if (!totalBullet.ContainsKey(key)) return;
@@ -59,5 +58,4 @@ public class BulletManager : MonoBehaviour
             }
         }
     }
-
 }

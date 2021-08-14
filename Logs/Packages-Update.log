@@ -1,11 +1,11 @@
 
-=== Thu Aug 12 12:34:35 2021
+=== Sun Aug 15 01:04:22 2021
 
 Packages were changed.
-Update Mode: mergeDefaultDependencies
+Update Mode: resetToDefaultDependencies
 
 The following packages were added:
-  com.unity.collab-proxy@1.5.7
+  com.unity.collab-proxy@1.7.1
   com.unity.ide.rider@2.0.7
   com.unity.ide.visualstudio@2.0.9
   com.unity.ide.vscode@1.2.3

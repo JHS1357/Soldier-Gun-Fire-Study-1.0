@@ -12,10 +12,12 @@ public class PlayerCtrl : MonoBehaviour
     private float r = 0.0f;
 
     private Animation animation;
+
     private void Awake()
     {
         animation = GetComponent<Animation>();
     }
+
     private void Update()
     {
         Move();
@@ -29,7 +31,6 @@ public class PlayerCtrl : MonoBehaviour
         r = Input.GetAxis("Mouse X");
 
         Vector3 moveDir = (Vector3.forward * v) + (Vector3.right * h);
-        // transform.forward
 
         if (moveDir.sqrMagnitude > 1)
             moveDir.Normalize();
@@ -40,10 +41,10 @@ public class PlayerCtrl : MonoBehaviour
 
     private void SetAnimation()
     {
-         if(v >= 0.1f)
-         {
+        if( v >= 0.1f)
+        {
             animation.CrossFade("RunF", 0.3f);
-         }
+        }
         else if (v <= -0.1f)
         {
             animation.CrossFade("RunB", 0.3f);
@@ -55,6 +56,10 @@ public class PlayerCtrl : MonoBehaviour
         else if (h <= -0.1f)
         {
             animation.CrossFade("RunL", 0.3f);
+        }
+        else
+        {
+            animation.CrossFade("Idle", 0.3f);
         }
     }
 }

@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class RemoveBullet : MonoBehaviour
 {
-    void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.CompareTag("Player"))
+        if(collision.collider.CompareTag("Bullet"))
         {
             collision.gameObject.SetActive(false);
-            /*
-            Debug.Log("Hello");
-            Destroy(collision.gameObject);
-            */
+
+            ContactPoint contact = collision.contacts[0];
+
+            ParticleManager.instance.Play("SmallExplosion", contact.point, Quaternion.identity);
         }
     }
 }
