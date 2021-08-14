@@ -57,19 +57,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\FireCtrl.cs" />
+    <Compile Include="Assets\Jun_Tools\Jun_TweenTools\Scripts\Jun_TweenRuntime.cs" />
+    <Compile Include="Assets\Jun_Tools\Jun_TweenTools\Scripts\Jun_Tween.cs" />
+    <Compile Include="Assets\Jun_Tools\Jun_TweenTools\Scripts\BezierCurve\Jun_BezierPoint.cs" />
+    <Compile Include="Assets\Scripts\CharacterBtn.cs" />
     <Compile Include="Assets\Scripts\MyGizmos.cs" />
     <Compile Include="Assets\Scripts\PunchCtrl.cs" />
     <Compile Include="Assets\Scripts\GunnerCtrl.cs" />
+    <Compile Include="Assets\Scripts\SelectManager.cs" />
+    <Compile Include="Assets\Jun_Tools\Jun_TweenTools\Scripts\BezierCurve\Jun_BezierCurveLineRender.cs" />
     <Compile Include="Assets\Scripts\FollowCam.cs" />
+    <Compile Include="Assets\Jun_Tools\Jun_TweenTools\Scripts\BezierCurve\BezierTest.cs" />
     <Compile Include="Assets\Scripts\BulletCtrl.cs" />
     <Compile Include="Assets\Scripts\DataManager.cs" />
     <Compile Include="Assets\Scripts\BulletManager.cs" />
     <Compile Include="Assets\Scripts\FighterCtrl.cs" />
+    <Compile Include="Assets\Scripts\LogoManager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\PlayerCtrl.cs" />
+    <Compile Include="Assets\Jun_Tools\Jun_TweenTools\Scripts\Enum\Jun_TweenType.cs" />
+    <Compile Include="Assets\Jun_Tools\Jun_TweenTools\Scripts\BezierCurve\Jun_BezierCurve.cs" />
     <Compile Include="Assets\Scripts\RemoveBullet.cs" />
     <Compile Include="Assets\Scripts\ParticleManager.cs" />
     <Compile Include="Assets\Scripts\Particle.cs" />
+    <Compile Include="Assets\Jun_Tools\Jun_TweenTools\Scripts\BezierCurve\Jun_BezierCurveTools.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\TextData\TextTable.txt" />
