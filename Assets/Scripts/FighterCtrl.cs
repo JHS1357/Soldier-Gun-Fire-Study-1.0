@@ -18,6 +18,17 @@ public class FighterCtrl : PlayerCtrl
         animator = GetComponent<Animator>();
     }
 
+    private new void Update()
+    {
+        base.Update();
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            //animator.applyRootMotion = true;
+            animator.SetTrigger("Jump");
+        }
+    }
+
     protected override void SetAnimation()
     {
         animator.SetFloat(hashSpeed, moveSpeed);
@@ -26,6 +37,7 @@ public class FighterCtrl : PlayerCtrl
         animator.SetFloat(hashDirY, moveDir.z);
     }
 
+    /*
     private void OnAnimatorIK(int layerIndex)
     {
         animator.SetIKPositionWeight(AvatarIKGoal.LeftHand, ikBlendWeight);
@@ -33,5 +45,5 @@ public class FighterCtrl : PlayerCtrl
 
         animator.SetIKPosition(AvatarIKGoal.LeftHand, leftHandPos.position);
         animator.SetIKRotation(AvatarIKGoal.LeftHand, leftHandPos.rotation);
-    }
+    }*/
 }

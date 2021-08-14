@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\FireCtrl.cs" />
     <Compile Include="Assets\Scripts\MyGizmos.cs" />
+    <Compile Include="Assets\Scripts\PunchCtrl.cs" />
     <Compile Include="Assets\Scripts\GunnerCtrl.cs" />
     <Compile Include="Assets\Scripts\FollowCam.cs" />
     <Compile Include="Assets\Scripts\BulletCtrl.cs" />

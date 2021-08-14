@@ -21,7 +21,7 @@ public abstract class PlayerCtrl : MonoBehaviour
     protected bool isRun = false;
     protected Vector3 moveDir;
 
-    private void Update()
+    protected void Update()
     {
         Move();
         SetAnimation();
