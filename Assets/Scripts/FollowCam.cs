@@ -14,7 +14,9 @@ public class FollowCam : MonoBehaviour
 
     private void Start()
     {
-        target = GameObject.Find("Player").transform;
+        //target = GameObject.Find("Player").transform;
+
+        target = GameManager.instance.player.transform;
     }
 
     private void LateUpdate()

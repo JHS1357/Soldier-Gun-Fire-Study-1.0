@@ -15,11 +15,26 @@ public struct CharacterData
 
 public class DataManager : MonoBehaviour
 {
-    static public DataManager instance;
+    //static public DataManager instance;
+    static private DataManager _instance;
+
+    static public DataManager instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                GameObject obj = new GameObject("DataManager");
+                _instance = obj.AddComponent<DataManager>();
+            }
+
+            return _instance;
+        }
+    }
 
     private void Awake()
     {
-        instance = this;
+        //instance = this;
 
         LoadTextData();
         LoadCharacterData();

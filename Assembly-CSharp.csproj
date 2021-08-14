@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\BulletCtrl.cs" />
     <Compile Include="Assets\Scripts\DataManager.cs" />
     <Compile Include="Assets\Scripts\BulletManager.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\PlayerCtrl.cs" />
     <Compile Include="Assets\Scripts\RemoveBullet.cs" />
     <Compile Include="Assets\Scripts\ParticleManager.cs" />
