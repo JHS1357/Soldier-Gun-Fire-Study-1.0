@@ -2,21 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCtrl : MonoBehaviour
+public abstract class PlayerCtrl : MonoBehaviour
 {
-    public float moveSpeed = 10.0f;
-    public float rotSpeed = 5.0f;
+    [SerializeField]
+    protected float walkSpeed = 5.0f;
+    [SerializeField]
+    protected float runSpeed = 10.0f;
 
-    private float h = 0.0f;
-    private float v = 0.0f;
-    private float r = 0.0f;
+    [SerializeField]
+    protected float rotSpeed = 5.0f;
 
-    private Animation animation;
+    protected float moveSpeed = 0;
 
-    private void Awake()
-    {
-        animation = GetComponent<Animation>();
-    }
+    protected float h = 0.0f;
+    protected float v = 0.0f;
+    protected float r = 0.0f;
+
+    protected bool isRun = false;
+    protected Vector3 moveDir;
 
     private void Update()
     {
@@ -30,36 +33,18 @@ public class PlayerCtrl : MonoBehaviour
         v = Input.GetAxis("Vertical");
         r = Input.GetAxis("Mouse X");
 
-        Vector3 moveDir = (Vector3.forward * v) + (Vector3.right * h);
+        moveDir = (Vector3.forward * v) + (Vector3.right * h);
 
         if (moveDir.sqrMagnitude > 1)
             moveDir.Normalize();
+
+        isRun = Input.GetKey(KeyCode.LeftShift);
+
+        moveSpeed = isRun ? runSpeed : walkSpeed;
 
         transform.Translate(moveDir * moveSpeed * Time.deltaTime);
         transform.Rotate(Vector3.up * rotSpeed * Time.deltaTime * r);
     }
 
-    private void SetAnimation()
-    {
-        if( v >= 0.1f)
-        {
-            animation.CrossFade("RunF", 0.3f);
-        }
-        else if (v <= -0.1f)
-        {
-            animation.CrossFade("RunB", 0.3f);
-        }
-        else if (h >= 0.1f)
-        {
-            animation.CrossFade("RunR", 0.3f);
-        }
-        else if (h <= -0.1f)
-        {
-            animation.CrossFade("RunL", 0.3f);
-        }
-        else
-        {
-            animation.CrossFade("Idle", 0.3f);
-        }
-    }
+    protected abstract void SetAnimation();
 }

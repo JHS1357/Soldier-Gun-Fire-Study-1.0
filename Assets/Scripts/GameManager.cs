@@ -5,11 +5,21 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     static public GameManager instance;
-
+    
     public Transform startPos;
 
     public int selectPlayerNum = 1;
-    public GameObject player;
+        
+    private GameObject _player;
+    public GameObject player
+    {
+        get
+        {
+            return _player;
+        }
+    }
+
+
 
     private void Awake()
     {
@@ -24,6 +34,6 @@ public class GameManager : MonoBehaviour
 
         GameObject prefab = Resources.Load<GameObject>(data.prefab);
 
-        player = Instantiate(prefab, startPos.position, startPos.rotation);
+        _player = Instantiate(prefab, startPos.position, startPos.rotation);
     }
 }
